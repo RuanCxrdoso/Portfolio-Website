@@ -40,7 +40,7 @@ export function HeroSection() {
           </div>
         </div>
         <div className="col-span-4 place-self-center mt-4 lg:mt-0">
-          <div className="rounded-full overflow-hidden bg-[#181818] w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] relative">
+          <div className="rounded-full overflow-hidden bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image 
               src="/assets/perfil-bg.png" 
               alt="Hero Image" 
