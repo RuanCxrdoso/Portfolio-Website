@@ -56,11 +56,13 @@ export function AboutSection() {
   }
 
   return (
-    <section className="text-white mt-14">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+    <section className="text-white mt-6 sm:mt-14">
+      <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image src={'/assets/about-image-2.png'} alt="" height={450} width={450} className="rounded-full"/>
         <div className="mt-6 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#F2A900] via-[#F28900] to-[#F25900]">About me</h2>
+          <h2 className="text-4xl md:text-6xl font-bold mb-4">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2A900] via-[#F28900] to-[#F25900]">About me</span>
+          </h2>
           <p className="text-base md:text-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum officiis doloremque quasi non dicta omnis laboriosam dolores fugit cupiditate assumenda! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo nesciunt tempore veniam vel mollitia excepturi reiciendis, vitae laudantium sunt modi!</p>
           <div className="flex flex-row mt-8">
             <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>Skills</TabButton>
