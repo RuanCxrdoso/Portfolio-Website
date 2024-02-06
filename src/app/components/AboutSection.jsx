@@ -1,7 +1,8 @@
 "use client"
-import Image from "next/image";
-import { useState, useTransition } from "react";
-import { TabButton } from "./TabButton";
+import Image from "next/image"
+import { useState, useTransition, useRef } from "react"
+import { TabButton } from "./TabButton"
+import { motion, useInView } from "framer-motion"
 
 const TAB_DATA = [
   {
@@ -17,7 +18,6 @@ const TAB_DATA = [
         <li className="pt-1">Vite.js</li>
         <li className="pt-1">TailwindCSS</li>
         <li className="pt-1">Bootstrap</li>
-        <li className="pt-1">Strapi</li>
         <li className="pt-1">Git/Github</li>
         <li className="pt-1">Scrum</li>
       </ul>
@@ -45,9 +45,23 @@ const TAB_DATA = [
   },
 ]
 
+const variantsImage = {
+  inScreen: { opacity: 1, translateX: 0 },
+  offScreen: { opacity: 0, translateX: -50  },
+}
+
+const variantsContent = {
+  inScreen: { opacity: 1, translateX: 0 },
+  offScreen: { opacity: 0, translateX: 50  },
+}
+
 export function AboutSection() {
   const [tab, setTab] = useState("skills")
   const [isPending, startTransition] = useTransition()
+  const ref1 = useRef(null)
+  const ref2 = useRef(null)
+  const isInView1 = useInView(ref1, { once: true })
+  const isInView2 = useInView(ref2, { once: true })
 
   function handleTabChange(id) {
     startTransition(() => {
@@ -56,10 +70,29 @@ export function AboutSection() {
   }
 
   return (
-    <section className="text-white mt-6 sm:mt-14">
-      <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src={'/assets/about-image-2.png'} alt="" height={450} width={450} className="rounded-full"/>
-        <div className="mt-6 md:mt-0 text-left flex flex-col h-full">
+    <section className="text-white mt-10 sm:mt-14 relative">
+
+      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#F2A900] to-transparent rounded-full h-80 w-80 z-0 blur-xl absolute top-44 -right-3/4 sm:-right-0 md:-right-44 transform translate-x-0 translate-y-1/2"></div>
+
+      <div  className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+        <motion.div
+          ref={ref1}
+          initial="offScreen"
+          animate={ isInView1 ? "inScreen" : "offScreen" }
+          transition={{ duration: 1.5 }}
+          variants={variantsImage}
+          className="z-10"
+        >
+          <Image src={'/assets/about-image-2.png'} alt="" height={450} width={450} className="rounded-full"/>
+        </motion.div>
+        <motion.div 
+          ref={ref2}
+          initial="offScrenn"
+          animate={ isInView2 ? "onScreen" : "offScreen" }
+          transition={{ duration: 1.5 }}
+          variants={variantsContent}
+          className="mt-6 md:mt-0 text-left flex flex-col h-full z-10"
+        >
           <h2 className="text-4xl md:text-6xl font-bold mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2A900] via-[#F28900] to-[#F25900]">About me</span>
           </h2>
@@ -69,10 +102,10 @@ export function AboutSection() {
             <TabButton selectTab={() => handleTabChange("education")} active={tab === "education"}>Education</TabButton>
             <TabButton selectTab={() => handleTabChange("experience")} active={tab === "experience"}>Experience</TabButton>
           </div>
-          <div className="mt-0">
+          <div className="mt-0 z-10">
             {TAB_DATA.find((navSelected) => navSelected.id === tab).content}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

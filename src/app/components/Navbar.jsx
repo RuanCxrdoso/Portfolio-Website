@@ -24,9 +24,9 @@ export function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#141414]">
+    <nav className="fixed top-0 left-0 right-0 bg-[#141414] z-20">
       <div className="flex flex-wrap justify-between items-center mx-auto p-6 md:p-8">
-        <Link href={"/"} className="text-lg md:text-4xl text-white font-semibold">
+        <Link href={"#about"} className="text-lg md:text-4xl text-white font-semibold">
           &lt;RCARDOSO/&gt;
         </Link>
         <div className="mobile-menu block md:hidden">
