@@ -3,10 +3,24 @@ import GithubIcon from "../../../public/assets/github-icon.svg"
 import LinkedinIcon from "../../../public/assets/linkedin-icon.svg"
 import Link from "next/link"
 import Image from "next/image"
-import { useState } from "react"
+import { useState, useRef } from "react"
+import { motion, useInView } from "framer-motion"
+
+const textVariants = {
+  onScreen: { opacity: 1, translateX: 0 },
+  offScreen: { opacity: 0, translateX: -50 }
+}
+const formVariants = {
+  onScreen: { opacity: 1, translateX: 0 },
+  offScreen: { opacity: 0, translateX: 50 }
+}
 
 export function EmailSection() {
   const [emailSubmitted, setEmailSubmitted] = useState(false)
+  const ref1 = useRef(null)
+  const ref2 = useRef(null)
+  const inView1 = useInView(ref1, { once: true })
+  const inView2 = useInView(ref2, { once: true })
 
   async function handleSubmit(ev) {
     ev.preventDefault()
@@ -40,9 +54,17 @@ export function EmailSection() {
   }
 
   return (
-    <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative">
+    <section id="contact" className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative">
+
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#F2A900] to-transparent rounded-full h-80 w-80 z-0 blur-xl absolute top-1/2 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
-      <div>
+
+      <motion.div
+        ref={ref1}
+        initial="offScreen"
+        animate={ inView1 ? "onScreen" : "offScreen" }
+        transition={{ duration: 1.5 }}
+        variants={textVariants}
+      >
         <h5 className="text-xl font-bold text-white my-2">Let&apos;s Connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">I&apos;m currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!</p>
         <div className="socials flex flex-row gap-4">
@@ -53,8 +75,15 @@ export function EmailSection() {
             <Image src={LinkedinIcon} width={50} height={50} alt="Linkedin Icon"/>
           </Link>
         </div>
-      </div>
-      <div className="mt-10 sm:mt-0 z-10">
+      </motion.div>
+      <motion.div
+        ref={ref2}
+        initial="offScreen"
+        animate={ inView2 ? "onScreen" : "offScreen" }
+        transition={{ duration: 1.5 }}
+        variants={formVariants}
+        className="mt-10 sm:mt-0 z-10"
+      >
         <form className="flex flex-col gap-4">
           <div className="mb-2">
             <label htmlFor="email" className="text-white block mb-2 text-sm font-medium">Your email</label>
@@ -83,7 +112,7 @@ export function EmailSection() {
             )
           }
         </form>
-      </div>
+      </motion.div>
     </section>
   )
 }

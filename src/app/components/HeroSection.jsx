@@ -1,13 +1,19 @@
 "use client";
 import React from "react";
 import Image from "next/image"
-import { TypeAnimation } from 'react-type-animation';
+import { TypeAnimation } from 'react-type-animation'
+import { motion } from "framer-motion"
 
 export function HeroSection() {
   return(
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
-        <div className="col-span-8 place-self-center text-center sm:text-left">
+        <motion.div 
+          initial={{ opacity: 0, translateX: -50}} 
+          animate={{ opacity: 1, translateX: 0}} 
+          transition={{ duration: 1.5 }} 
+          className="col-span-8 place-self-center text-center sm:text-left mr-4"
+        >
           <h1 className="text-white h-40 sm:h-44 lg:h-56 xl:h-auto mb-4 text-4xl sm:text-5xl lg:text-6xl leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2A900] via-[#F28900] to-[#F25900]">
               Hello, I&apos;m{" "}
@@ -27,7 +33,7 @@ export function HeroSection() {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
+          <p className="text-[#ADB7BE] text-base mt-12 sm:mt-0 sm:text-lg mb-6 lg:text-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit culpa ipsa aliquid officia iure, esse cum qui impedit aut explicabo tempora?
           </p>
           <div>
@@ -38,9 +44,14 @@ export function HeroSection() {
               <span className="transition-colors duration-300 block bg-[#121212] hover:bg-[#424242] rounded-full px-5 py-2">Download my CV :)</span>
             </button>
           </div>
-        </div>
-        <div className="col-span-4 place-self-center mt-4 lg:mt-0">
-          <div className="rounded-full overflow-hidden bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, translateX: 50}} 
+          animate={{ opacity: 1, translateX: 0}} 
+          transition={{ duration: 1.5 }} 
+          className="col-span-4 place-self-center mt-4 lg:mt-0"
+        >
+          <div className="rounded-full overflow-hidden bg-[#181818] mt-8 sm:mt-0 w-[250px] h-[250px] lg:w-[370px] lg:h-[370px] xl:w-[400px] xl:h-[400px] relative">
             <Image 
               src="/assets/perfil-cartoon.png" 
               alt="Hero Image" 
@@ -49,7 +60,7 @@ export function HeroSection() {
               height={450} 
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
