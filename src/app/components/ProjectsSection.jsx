@@ -92,15 +92,15 @@ export function ProjectsSection() {
   const filteredProjects = projectsData.filter((project) => project.tag.includes(activeTag))
 
   return (
-    <>
+    <div id="projects">
       <h2 className="py-2 text-center text-4xl sm:text-6xl font-bold mt-8">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2A900] via-[#F28900] to-[#F25900]">My projects</span>
       </h2>
 
       <div className="text-white md:text-xl font-semibold flex justify-center items-center gap-16 w-auto my-12">
-        <ProjectTag selectFilter={() => handleTagClick("All")}  tag="All" active={activeTag === "All"}/>
-        <ProjectTag selectFilter={() => handleTagClick("React")}  tag="React" active={activeTag === "React"}/>
-        <ProjectTag selectFilter={() => handleTagClick("Vanilla Js")}  tag="Vanilla Js" active={activeTag === "Vanilla Js"}/>
+        <ProjectTag selectFilter={() => handleTagClick("All")}  tag="All" active={activeTag === "All"} />
+        <ProjectTag selectFilter={() => handleTagClick("React")}  tag="React" active={activeTag === "React"} />
+        <ProjectTag selectFilter={() => handleTagClick("Vanilla Js")}  tag="Vanilla Js" active={activeTag === "Vanilla Js"} />
       </div>
 
       <div className="grid lg:grid-cols-2 2xl:grid-cols-3 gap-8 md:gap-12">
@@ -117,6 +117,6 @@ export function ProjectsSection() {
           ))
         }
       </div>
-    </>
+    </div>
   )
 }
