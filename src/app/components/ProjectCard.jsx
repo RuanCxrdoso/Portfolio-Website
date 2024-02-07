@@ -16,7 +16,7 @@ export function ProjectCard({ imgUrl, title, description, gitUrl, previewUrl }) 
               <CodeBracketIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white"/>
             </Link>
 
-            <Link href="#" target="_blank" className="h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link">
+            <Link href={previewUrl} target="_blank" className="h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link">
               <EyeIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white"/>
             </Link>
 
