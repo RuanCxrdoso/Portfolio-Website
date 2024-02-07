@@ -41,3 +41,27 @@ body {
 h1, h2, p, span, button {
   user-select: none;
 }
+
+.logo {
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 1em #61dafbe5);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo.react {
+    animation: logo-spin infinite 7s linear;
+  }
+}
