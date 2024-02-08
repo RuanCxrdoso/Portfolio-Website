@@ -11,7 +11,7 @@ const projectsData = [
     title: "NLW - Shorts Summary",
     description: "Make shorts summary with IA",
     gitUrl: "https://github.com/RuanCxrdoso/NLW-IA",
-    previewUrl: "https://nlw-ia-git-main-ruancxrdoso.vercel.app",
+    previewUrl: "https://nlw-summary-ia.vercel.app",
     image: "/assets/projects/nlwIA.png",
     tag: ["All", "Vanilla Js"],
   },
@@ -29,7 +29,7 @@ const projectsData = [
     title: "Ignite Feed",
     description: "Notice Feed with comments",
     gitUrl: "https://github.com/RuanCxrdoso/Ignite-Feed",
-    previewUrl: "https://ignite-feed-git-main-ruancxrdoso.vercel.app",
+    previewUrl: "https://ignite-social-feed.vercel.app",
     image: "/assets/projects/igniteFeed.png",
     tag: ["All", "React"],
   },
@@ -56,7 +56,7 @@ const projectsData = [
     title: "Spotify Interface",
     description: "Spotify Clone with Tailwind",
     gitUrl: "https://github.com/RuanCxrdoso/Spotify-Clone",
-    previewUrl: "https://spotify-clone-git-master-ruancxrdoso.vercel.app",
+    previewUrl: "https://desktop-spotify-clone.vercel.app",
     image: "/assets/projects/spotifyClone.png",
     tag: ["All", "Vanilla Js"],
   },
@@ -83,7 +83,7 @@ const projectsData = [
 export function ProjectsSection() {
   const [activeTag, setActiveTag] = useState("All")
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
+  const isInView = useInView(ref, { once: false })
 
   function handleTagClick(id) {
     setActiveTag(id)

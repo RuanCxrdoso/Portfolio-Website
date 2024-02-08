@@ -60,8 +60,8 @@ export function AboutSection() {
   const [isPending, startTransition] = useTransition()
   const ref1 = useRef(null)
   const ref2 = useRef(null)
-  const isInView1 = useInView(ref1, { once: true })
-  const isInView2 = useInView(ref2, { once: true })
+  const isInView1 = useInView(ref1, { once: false })
+  const isInView2 = useInView(ref2, { once: false })
 
   function handleTabChange(id) {
     startTransition(() => {
