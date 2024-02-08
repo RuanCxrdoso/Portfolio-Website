@@ -56,23 +56,25 @@ export function EmailSection() {
         variants={formVariants}
         className="flex flex-col gap-10 justify-center items-start mt-10 sm:mt-0 z-10"
       >
-        <h5 className="text-xl font-bold text-white my-2 -mb-4 ">Talk with me !</h5>
-        <Link 
-          href="mailto:cardosoruan2001@gmail.com" 
-          className="group flex justify-start items-center gap-4 bg-[#141414] p-4 px-6 sm:px-8 rounded-xl w-full sm:w-4/5 relative transform hover:-translate-y-2 transition-transform duration-300"
-        >
-          <EnvelopeIcon width={35} height={35} />
-          <span className="text-md sm:text-xl font-semibold">cardosoruan2001@gmail.com</span>
-          <ArrowRightIcon width={20} height={20} className="absolute right-8 hidden sm:block transform group-hover:translate-x-2 transition-transform duration-300"/>
-        </Link>
-        <Link 
-          href="https://wa.me/55071986944657" 
-          className="group flex justify-start items-center gap-4 bg-[#141414] p-4 px-6 sm:px-8 rounded-xl w-full sm:w-4/5 relative transform hover:-translate-y-2 transition-transform duration-300"
-        >
-          <Image src={WhatsAppLogo} alt="" height={35} width={35}/>
-          <span className="text-md sm:text-xl font-semibold">Send me a message ;)</span>
-          <ArrowRightIcon width={20} height={20} className="absolute right-8 hidden sm:block transform group-hover:translate-x-2 transition-transform duration-300"/>
-        </Link>
+        <h5 className="text-xl font-bold text-white py-2 mt-6 sm:mt-0 sm:-mb-4">Talk with me !</h5>
+        <div className="flex flex-col gap-12 sm:gap-10 justify-center items-start -ml-4 sm:ml-0 sm:w-full">
+          <Link
+            href="mailto:cardosoruan2001@gmail.com"
+            className="group flex justify-start items-center gap-4 bg-[#141414] p-4 px-6 sm:px-8 rounded-xl w-full sm:w-4/5 relative transform hover:-translate-y-2 transition-transform duration-300"
+          >
+            <EnvelopeIcon width={35} height={35} />
+            <span className="text-md sm:text-xl font-semibold">cardosoruan2001@gmail.com</span>
+            <ArrowRightIcon width={20} height={20} className="absolute right-8 hidden sm:block transform group-hover:translate-x-2 transition-transform duration-300"/>
+          </Link>
+          <Link
+            href="https://wa.me/55071986944657"
+            className="group flex justify-start items-center gap-4 bg-[#141414] p-4 px-6 sm:px-8 rounded-xl w-full sm:w-4/5 relative transform hover:-translate-y-2 transition-transform duration-300"
+          >
+            <Image src={WhatsAppLogo} alt="" height={35} width={35}/>
+            <span className="text-md sm:text-xl font-semibold">Send me a message ;)</span>
+            <ArrowRightIcon width={20} height={20} className="absolute right-8 hidden sm:block transform group-hover:translate-x-2 transition-transform duration-300"/>
+          </Link>
+        </div>
       </motion.div>
     </section>
   )
