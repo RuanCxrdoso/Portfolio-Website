@@ -19,8 +19,8 @@ export function EmailSection() {
   const [emailSubmitted, setEmailSubmitted] = useState(false)
   const ref1 = useRef(null)
   const ref2 = useRef(null)
-  const inView1 = useInView(ref1, { once: true })
-  const inView2 = useInView(ref2, { once: true })
+  const inView1 = useInView(ref1, { once: false })
+  const inView2 = useInView(ref2, { once: false })
 
   async function handleSubmit(ev) {
     ev.preventDefault()
@@ -29,8 +29,10 @@ export function EmailSection() {
       subject: ev.target.subject.value,
       message: ev.target.message.value,
     }
+
+    console.log(data.email);
     const JSONdata = JSON.stringify(data)
-    const endpoint = "/api/email"
+    const endpoint = "/api/send"
 
     // Form the request for sending data to the server.
     const options = {
@@ -48,7 +50,7 @@ export function EmailSection() {
     const resData = await response.json()
 
     if (response.status === 200) {
-      console.log('Messa sent !');
+      console.log('Message sent !');
       setEmailSubmitted(true)
     }
   }

@@ -2,16 +2,34 @@
 import React from "react";
 import Image from "next/image"
 import { TypeAnimation } from 'react-type-animation'
-import { motion } from "framer-motion"
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react";
+
+const heroTextVariants = {
+  "onScreen": { opacity: 1, translateX: 0 },
+  "offScreen": {  opacity: 0, translateX: -70 }
+}
+
+const heroAvatarVariants = {
+  "onScreen": { opacity: 1, translateX: 0 },
+  "offScreen": {  opacity: 0, translateX: 70 }
+}
 
 export function HeroSection() {
+  const ref1 = useRef(null)
+  const ref2 = useRef(null)
+  const inView1 = useInView(ref1, { once: false })
+  const inView2 = useInView(ref2, { once: false })
+
   return(
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
-        <motion.div 
-          initial={{ opacity: 0, translateX: -50}} 
-          animate={{ opacity: 1, translateX: 0}} 
-          transition={{ duration: 1.5 }} 
+        <motion.div
+          ref={ref1}
+          initial="offScreen" 
+          animate={ inView1 ? "onScreen" : "offScreen" } 
+          transition={{ duration: 2 }}
+          variants={heroTextVariants}
           className="col-span-8 place-self-center text-center sm:text-left mr-4"
         >
           <h1 className="text-white h-40 sm:h-44 lg:h-56 xl:h-auto mb-4 text-4xl sm:text-5xl lg:text-6xl leading-normal font-extrabold">
@@ -46,9 +64,11 @@ export function HeroSection() {
           </div>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, translateX: 50}} 
-          animate={{ opacity: 1, translateX: 0}} 
-          transition={{ duration: 1.5 }} 
+          ref={ref2}
+          initial="offScreen" 
+          animate={ inView2 ? "onScreen" : "offScreen" } 
+          transition={{ duration: 2 }}
+          variants={heroAvatarVariants}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
           <div className="rounded-full overflow-hidden bg-[#181818] mt-8 sm:mt-0 w-[250px] h-[250px] lg:w-[370px] lg:h-[370px] xl:w-[400px] xl:h-[400px] relative">
