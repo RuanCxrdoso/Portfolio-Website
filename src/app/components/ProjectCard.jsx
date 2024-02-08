@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export function ProjectCard({ imgUrl, title, description, gitUrl, previewUrl }) {
   return (
-    <div>
+    <div className="transform hover:-translate-y-4 transition-transform duration-300">
       <div 
         className="h-52 md:h-72 rounded-t-xl overflow-hidden relative group" 
         style={{ 

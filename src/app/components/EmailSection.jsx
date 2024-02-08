@@ -1,8 +1,10 @@
 "use client"
 import GithubIcon from "../../../public/assets/github-icon.svg"
 import LinkedinIcon from "../../../public/assets/linkedin-icon.svg"
+import WhatsAppLogo from "../../../public/assets/whatsapp-logo.png"
 import Link from "next/link"
 import Image from "next/image"
+import { EnvelopeIcon, ArrowRightIcon } from "@heroicons/react/24/outline"
 import { useState, useRef } from "react"
 import { motion, useInView } from "framer-motion"
 
@@ -22,39 +24,6 @@ export function EmailSection() {
   const inView1 = useInView(ref1, { once: false })
   const inView2 = useInView(ref2, { once: false })
 
-  async function handleSubmit(ev) {
-    ev.preventDefault()
-    const data = {
-      email: ev.target.email.value,
-      subject: ev.target.subject.value,
-      message: ev.target.message.value,
-    }
-
-    console.log(data.email);
-    const JSONdata = JSON.stringify(data)
-    const endpoint = "/api/send"
-
-    // Form the request for sending data to the server.
-    const options = {
-      // The method is POST because we are sending data.
-      method: "POST",
-      // Tell the server we're sending JSON.
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // Body of the request is the JSON data we created above.
-      body: JSONdata,
-    };
-
-    const response = await fetch(endpoint, options)
-    const resData = await response.json()
-
-    if (response.status === 200) {
-      console.log('Message sent !');
-      setEmailSubmitted(true)
-    }
-  }
-
   return (
     <section id="contact" className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative">
 
@@ -66,15 +35,16 @@ export function EmailSection() {
         animate={ inView1 ? "onScreen" : "offScreen" }
         transition={{ duration: 1.5 }}
         variants={textVariants}
+        className="z-10"
       >
         <h5 className="text-xl font-bold text-white my-2">Let&apos;s Connect</h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md">I&apos;m currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!</p>
+        <p className="text-[#ADB7BE] mb-4 w-4/5 sm:max-w-md">I&apos;m currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!</p>
         <div className="socials flex flex-row gap-4">
           <Link href="https://github.com/RuanCxrdoso" target="_blank">
             <Image src={GithubIcon} width={50} height={50} alt="Github Icon"/>
           </Link>
           <Link href="https://www.linkedin.com/in/ruancardosolinkdin/" target="_blank">
-            <Image src={LinkedinIcon} width={50} height={50} alt="Linkedin Icon"/>
+            <Image src={LinkedinIcon} width={50} height={50} alt="Linkedin Icon" />
           </Link>
         </div>
       </motion.div>
@@ -84,36 +54,25 @@ export function EmailSection() {
         animate={ inView2 ? "onScreen" : "offScreen" }
         transition={{ duration: 1.5 }}
         variants={formVariants}
-        className="mt-10 sm:mt-0 z-10"
+        className="flex flex-col gap-10 justify-center items-start mt-10 sm:mt-0 z-10"
       >
-        <form className="flex flex-col gap-4">
-          <div className="mb-2">
-            <label htmlFor="email" className="text-white block mb-2 text-sm font-medium">Your email</label>
-            <input type="email" name="email" id="email" required placeholder="me@google.com" className="bg-[#181818] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5" />
-          </div>
-          <div className="mb-2">
-            <label htmlFor="subject" className="text-white block mb-2 text-sm font-medium">Subject</label>
-            <input type="text" name="subject" id="subject" required placeholder="Subject..." className="bg-[#181818] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5" />
-          </div>
-          <div className="mb-2">
-            <label htmlFor="message" className="text-white block mb-2 text-sm font-medium">Message</label>
-            <textarea type="text" name="message" id="message" required placeholder="Let's talk about..." className="bg-[#181818] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 resize-none h-32" />
-          </div>
-          <button 
-            onSubmit={handleSubmit} 
-            type="submit" 
-            className="bg-[#F2A900] text-[#000] hover:bg-[#F27900] transition-colors duration-300 font-semibold text-md rounded-lg py-2.5 px-5 w-full"
-          >
-            Send Message
-          </button>
-          {
-            emailSubmitted && (
-              <p className="text-green-500 text-sm mt-2">
-                Email sent successfully!
-              </p>
-            )
-          }
-        </form>
+        <h5 className="text-xl font-bold text-white my-2 -mb-4 ">Talk with me !</h5>
+        <Link 
+          href="mailto:cardosoruan2001@gmail.com" 
+          className="group flex justify-start items-center gap-4 bg-[#141414] p-4 px-6 sm:px-8 rounded-xl w-full sm:w-4/5 relative transform hover:-translate-y-2 transition-transform duration-300"
+        >
+          <EnvelopeIcon width={35} height={35} />
+          <span className="text-md sm:text-xl font-semibold">cardosoruan2001@gmail.com</span>
+          <ArrowRightIcon width={20} height={20} className="absolute right-8 hidden sm:block transform group-hover:translate-x-2 transition-transform duration-300"/>
+        </Link>
+        <Link 
+          href="https://wa.me/55071986944657" 
+          className="group flex justify-start items-center gap-4 bg-[#141414] p-4 px-6 sm:px-8 rounded-xl w-full sm:w-4/5 relative transform hover:-translate-y-2 transition-transform duration-300"
+        >
+          <Image src={WhatsAppLogo} alt="" height={35} width={35}/>
+          <span className="text-md sm:text-xl font-semibold">Send me a message ;)</span>
+          <ArrowRightIcon width={20} height={20} className="absolute right-8 hidden sm:block transform group-hover:translate-x-2 transition-transform duration-300"/>
+        </Link>
       </motion.div>
     </section>
   )

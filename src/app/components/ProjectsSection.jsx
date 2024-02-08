@@ -35,15 +35,42 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "iMovi",
-    description: "Bootstrap Landing Page",
-    gitUrl: "https://github.com/RuanCxrdoso/Landing-Page",
-    previewUrl: "",
-    image: "/assets/projects/iMovi.jpg",
-    tag: ["All", "Vanilla Js"],
+    title: "NLW - Notes",
+    description: "Notes app with functionalities - available soon",
+    gitUrl: "https://rcardoso.vercel.app",
+    previewUrl: "https://rcardoso.vercel.app",
+    image: "/assets/projects/nlw-expert-notes.png",
+    tag: ["All", "React"],
   },
   {
     id: 5,
+    title: "Login form",
+    description: "A simple login form with CSS",
+    gitUrl: "https://github.com/RuanCxrdoso/Login-Form",
+    previewUrl: "https://login-form-foundations.vercel.app",
+    image: "/assets/projects/loginFormPreview.png",
+    tag: ["All", "Vanilla Js"],
+  },
+  {
+    id: 6,
+    title: "Portfolio",
+    description: "My personal portfolio made with Next",
+    gitUrl: "https://github.com/RuanCxrdoso/portfolio-website",
+    previewUrl: "https://rcardoso.vercel.app",
+    image: "/assets/projects/myPortfolio.jpg",
+    tag: ["All", "React"],
+  },
+  {
+    id: 7,
+    title: "Spotify Interface",
+    description: "Spotify Clone with Tailwind",
+    gitUrl: "https://github.com/RuanCxrdoso/Spotify-Clone",
+    previewUrl: "https://desktop-spotify-clone.vercel.app",
+    image: "/assets/projects/spotifyClone.png",
+    tag: ["All", "Vanilla Js"],
+  },
+  {
+    id: 8,
     title: "Calculator",
     description: "Calculator with 4 operations",
     gitUrl: "https://github.com/RuanCxrdoso/Calc-Js",
@@ -52,12 +79,12 @@ const projectsData = [
     tag: ["All", "Vanilla Js"],
   },
   {
-    id: 6,
-    title: "Spotify Interface",
-    description: "Spotify Clone with Tailwind",
-    gitUrl: "https://github.com/RuanCxrdoso/Spotify-Clone",
-    previewUrl: "https://desktop-spotify-clone.vercel.app",
-    image: "/assets/projects/spotifyClone.png",
+    id: 9,
+    title: "iMovi",
+    description: "Bootstrap Landing Page",
+    gitUrl: "https://github.com/RuanCxrdoso/Landing-Page",
+    previewUrl: "",
+    image: "/assets/projects/iMovi.jpg",
     tag: ["All", "Vanilla Js"],
   },
   // {
@@ -101,12 +128,13 @@ export function ProjectsSection() {
       <h2 className="py-2 text-center text-4xl sm:text-6xl font-bold mt-8">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2A900] via-[#F28900] to-[#F25900]">My projects</span>
       </h2>
-
       <div className="text-white md:text-xl font-semibold flex justify-center items-center gap-16 w-auto my-12">
         <ProjectTag selectFilter={() => handleTagClick("All")}  tag="All" active={activeTag === "All"} />
         <ProjectTag selectFilter={() => handleTagClick("React")}  tag="React" active={activeTag === "React"} />
         <ProjectTag selectFilter={() => handleTagClick("Vanilla Js")}  tag="Vanilla Js" active={activeTag === "Vanilla Js"} />
       </div>
+
+      <div className="italic text-xs text-[#ADB7BE] text-center -mt-4 mb-6">Click on the card for more !</div>
 
       <ul ref={ref} className="grid lg:grid-cols-2 2xl:grid-cols-3 gap-8 md:gap-12">
         {
