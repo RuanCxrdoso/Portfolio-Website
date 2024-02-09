@@ -96,13 +96,16 @@ export function AboutSection() {
           <h2 className="text-4xl md:text-6xl font-bold mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2A900] via-[#F28900] to-[#F25900]">About me</span>
           </h2>
-          <p className="text-base md:text-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum officiis doloremque quasi non dicta omnis laboriosam dolores fugit cupiditate assumenda! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo nesciunt tempore veniam vel mollitia excepturi reiciendis, vitae laudantium sunt modi!</p>
+          <p className="text-base md:text-lg text-[#ADB7BE]">I am a technology enthusiast, a 22 year old young man who brings with him a passion for innovation and
+          through the world of software and hardware development. I am determined to pursue a career
+          in this dynamic field, driven by an insatiable curiosity and a desire to learn
+          continuous.</p>
           <div className="flex flex-row mt-8">
             <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>Skills</TabButton>
             <TabButton selectTab={() => handleTabChange("education")} active={tab === "education"}>Education</TabButton>
             <TabButton selectTab={() => handleTabChange("experience")} active={tab === "experience"}>Experience</TabButton>
           </div>
-          <div className="mt-0 z-10">
+          <div className="mt-0 z-10 text-[#ADB7BE]">
             {TAB_DATA.find((navSelected) => navSelected.id === tab).content}
           </div>
         </motion.div>

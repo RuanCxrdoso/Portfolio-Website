@@ -4,6 +4,7 @@ import Image from "next/image"
 import { TypeAnimation } from 'react-type-animation'
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react";
+import myCV from '../../../public/ruanCV.zip'
 
 const heroTextVariants = {
   "onScreen": { opacity: 1, translateX: 0 },
@@ -52,15 +53,19 @@ export function HeroSection() {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base mt-12 sm:mt-0 sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit culpa ipsa aliquid officia iure, esse cum qui impedit aut explicabo tempora?
+            Captivated by the world of technology for a few years, my main goal is to use code to develop tangible solutions to complex problems.
           </p>
-          <div>
-            <button className="transition-colors duration-300 px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#F2A900] via-[#F28900] to-[#F25900] text-black hover:text-[#181818] font-bold">
-              Hire me !
-            </button>
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-[#F2A900] via-[#F28900] to-[#F25900] hover:bg-[#424242] text-white mt-3">
-              <span className="transition-colors duration-300 block bg-[#121212] hover:bg-[#424242] rounded-full px-5 py-2">Download my CV :)</span>
-            </button>
+          <div className="flex flex-col sm:flex-row gap-6 sm:gap-4">
+            <div>
+              <a href="https://www.linkedin.com/in/ruancardosolinkdin/" target="_blank" className="block py-3 px-5 font-bold rounded-full bg-gradient-to-br from-[#F2A900] via-[#F28900] to-[#F25900] text-black hover:text-[#181818] transition-colors duration-300">
+                Hire me !
+              </a>
+            </div>
+            <div>
+              <a download={true} href={myCV} className="py-1 w-full sm:w-fit mt-3">
+                <span className="transition-colors duration-300 block text-[#ADB7BE] bg-[#121212] hover:bg-[#424242] rounded-full px-5 py-3">Download my CV :)</span>
+              </a>
+            </div>
           </div>
         </motion.div>
         <motion.div
