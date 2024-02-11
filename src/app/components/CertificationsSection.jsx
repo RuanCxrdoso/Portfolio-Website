@@ -1,6 +1,8 @@
 "use client"
 
+import { useEffect, useState } from 'react';
 import Image from 'next/image'
+
 import { images } from '../../../public/certificationsImages/certificationsImages';
 
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -10,12 +12,22 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 export function CertificationsSection() {
-  const swiperStyle = {
-    backgroundImage: 'url()',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center center',
-  }
+  const [navigation, setNavigation] = useState(window.innerWidth > 768)
+
+  useEffect(() => {
+    const updateNavigation = () => {
+      setNavigation(window.innerWidth > 768)
+    };
+
+    window.addEventListener('resize', updateNavigation)
+
+    updateNavigation()
+
+    return () => {
+      window.removeEventListener('resize', updateNavigation)
+    }
+    }, [])
+
   return (
     <section className='mb-24 mt-16 sm:mb-36'>
       <h2 className="py-2 text-center text-4xl sm:text-6xl font-bold mt-8 mb-8">
@@ -29,7 +41,7 @@ export function CertificationsSection() {
           spaceBetween={40}
           slidesPerView={3}
           speed={700}
-          navigation={window.innerWidth > 767}
+          navigation={navigation}
           effect="coverflow"
           pagination={{ clickable: true }}
           coverflowEffect={{
