@@ -1,5 +1,17 @@
 "use client"
 import Image from "next/image"
+import html5  from '../../../public/assets/skills/html5-color.svg'
+import css3   from '../../../public/assets/skills/css3-color.svg'
+import javascript   from '../../../public/assets/skills/javascript-color.svg'
+import typescript   from '../../../public/assets/skills/typescript-color.svg'
+import reactJs   from '../../../public/assets/skills/react-color.svg'
+import nextJs  from '../../../public/assets/skills/nextdotjs-color.svg'
+import vite   from '../../../public/assets/skills/vite-color.svg'
+import tailwind   from '../../../public/assets/skills/tailwindcss-color.svg'
+import styledComponents   from '../../../public/assets/skills/styledcomponents-color.svg'
+import bootstrap   from '../../../public/assets/skills/bootstrap-color.svg'
+import git   from '../../../public/assets/skills/git-color.svg'
+import github   from '../../../public/assets/skills/github-color.svg'
 import { useState, useTransition, useRef } from "react"
 import { TabButton } from "./TabButton"
 import { motion, useInView } from "framer-motion"
@@ -9,27 +21,29 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-2 ml-3 mt-4">
-        <li className="pt-1">HTML</li>
-        <li className="pt-1">CSS</li>
-        <li className="pt-1">JavaScript/TypeScript</li>
-        <li className="pt-1">React.js</li>
-        <li className="pt-1">Next.js</li>
-        <li className="pt-1">Vite.js</li>
-        <li className="pt-1">TailwindCSS</li>
-        <li className="pt-1">Bootstrap</li>
-        <li className="pt-1">Git/Github</li>
-        <li className="pt-1">Scrum</li>
-      </ul>
+      <div className="flex flex-wrap sm:justify-center gap-6 mt-8">
+        <Image src={html5} alt="" height={60} width={60} />
+        <Image src={css3} alt="" height={60} width={60} />
+        <Image src={javascript} alt="" height={60} width={60} />
+        <Image src={typescript} alt="" height={60} width={60} />
+        <Image src={reactJs} alt="" height={60} width={60} />
+        <Image src={nextJs} alt="" height={60} width={60} />
+        <Image src={vite} alt="" height={60} width={60} />
+        <Image src={tailwind} alt="" height={60} width={60} />
+        <Image src={styledComponents} alt="" height={60} width={60} />
+        <Image src={bootstrap} alt="" height={60} width={60} />
+        <Image src={git} alt="" height={60} width={60} />
+        <Image src={github} alt="" height={60} width={60} />
+      </div>
     )
   },
   {
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc pl-2 ml-0 mt-4">
-        <li className="pt-2">Computer Engineering Bachelor - Universidade Federal da Bahia (2021 ~ 2027)</li>
-        <li className="pt-2">Programador FullStack JavaScript - OneBitCode (Coursing)</li>
+      <ul className="list-disc pl-2 ml-0 mt-4 text-lg">
+        <li className="pt-2">Computer Engineering Bachelor - Federal University of Bahia (2021 ~ 2027)</li>
+        <li className="pt-2">FullStack JavaScript Developer - OneBitCode (Coursing)</li>
         <li className="pt-2">React.js - Rocketseat (Coursing)</li>
       </ul>
     )
@@ -38,8 +52,8 @@ const TAB_DATA = [
     title: "Experience",
     id: "experience",
     content: (
-      <ul className="list-disc pl-2 ml-3 mt-4">
-        <li className="pt-1">Front-End Developer - TITAN Computação Inteligente (sep, 2023 ~ this moment)</li>
+      <ul className="list-disc pl-2 ml-0 mt-4 text-lg">
+        <li className="pt-2">Front-End Developer - TITAN Smart Computing (sep, 2023 ~ present)</li>
       </ul>
     )
   },
@@ -105,7 +119,7 @@ export function AboutSection() {
             <TabButton selectTab={() => handleTabChange("education")} active={tab === "education"}>Education</TabButton>
             <TabButton selectTab={() => handleTabChange("experience")} active={tab === "experience"}>Experience</TabButton>
           </div>
-          <div className="mt-0 z-10 text-[#ADB7BE]">
+          <div className="mt-0 mb-8 z-10 text-[#ADB7BE]">
             {TAB_DATA.find((navSelected) => navSelected.id === tab).content}
           </div>
         </motion.div>
