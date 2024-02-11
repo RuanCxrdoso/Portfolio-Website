@@ -57,7 +57,7 @@ export function EmailSection() {
         className="flex flex-col gap-10 justify-center items-start mt-10 sm:mt-0 z-10"
       >
         <h5 className="text-xl font-bold text-white py-2 mt-6 sm:mt-0 sm:-mb-4">Talk with me !</h5>
-        <div className="flex flex-col gap-12 sm:gap-10 justify-center items-start -ml-2 sm:ml-0 sm:w-full">
+        <div className="flex flex-col gap-12 sm:gap-10 justify-center items-start -ml-4 sm:ml-0 sm:w-full">
           <Link
             href="mailto:cardosoruan2001@gmail.com"
             className="group flex justify-start items-center gap-4 bg-[#141414] p-4 px-6 sm:px-8 rounded-xl w-full sm:w-4/5 relative transform hover:-translate-y-2 transition-transform duration-300"
