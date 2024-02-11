@@ -12,7 +12,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 export function CertificationsSection() {
-  const [navigation, setNavigation] = useState(window.innerWidth > 768)
+  const [navigation, setNavigation] = useState(false)
 
   useEffect(() => {
     const updateNavigation = () => {
