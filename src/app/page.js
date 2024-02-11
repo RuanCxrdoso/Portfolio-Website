@@ -1,5 +1,6 @@
 import { AboutSection } from "./components/AboutSection";
 import { AchievementsSection } from "./components/AchievementsSection";
+import { CertificationsSection } from "./components/CertificationsSection";
 import { EmailSection } from "./components/EmailSection";
 import { Footer } from "./components/Footer";
 import { HeroSection } from "./components/HeroSection";
@@ -14,6 +15,7 @@ export default function Home() {
         <HeroSection />
         <AchievementsSection />
         <AboutSection />
+        <CertificationsSection />
         <ProjectsSection />
         <EmailSection />
       </div>

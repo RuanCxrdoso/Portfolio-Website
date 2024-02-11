@@ -32,6 +32,14 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+.swiper-button-next, .swiper-button-prev {
+  color: #F2A900 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #F2A900 !important;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
