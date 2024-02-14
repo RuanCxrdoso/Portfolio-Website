@@ -15,6 +15,7 @@ import github   from '../../../public/assets/skills/github-color.svg'
 import { useState, useTransition, useRef } from "react"
 import { TabButton } from "./TabButton"
 import { motion, useInView } from "framer-motion"
+import Link from "next/link"
 
 const TAB_DATA = [
   {
@@ -42,9 +43,9 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2 ml-0 mt-4 text-lg">
-        <li className="pt-2">Computer Engineering Bachelor - Federal University of Bahia (2021 ~ 2027)</li>
-        <li className="pt-2">FullStack JavaScript Developer - OneBitCode (Coursing)</li>
-        <li className="pt-2">React.js - Rocketseat (Coursing)</li>
+        <li className="pt-2">Computer Engineering Bachelor - <Link href="https://www.ufba.br/" className="italic" target="_blank">Federal University of Bahia</Link> (2021 ~ 2027)</li>
+        <li className="pt-2">FullStack JavaScript Developer - <Link href="https://www.onebitcode.com/" className="italic" target="_blank">OneBitCode</Link> (Coursing)</li>
+        <li className="pt-2">React - <Link href="https://www.rocketseat.com.br/" className="italic" target="_blank">Rocketseat</Link> (Coursing)</li>
       </ul>
     )
   },
@@ -53,7 +54,7 @@ const TAB_DATA = [
     id: "experience",
     content: (
       <ul className="list-disc pl-2 ml-0 mt-4 text-lg">
-        <li className="pt-2">Front-End Developer - TITAN Smart Computing (sep, 2023 ~ present)</li>
+        <li className="pt-2">Front-End Developer - <Link href="https://titanci.com.br/" className="italic" target="_blank">TITAN Computação Inteligente</Link> (sep, 2023 ~ present)</li>
       </ul>
     )
   },
