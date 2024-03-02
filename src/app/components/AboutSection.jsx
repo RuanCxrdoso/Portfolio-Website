@@ -111,7 +111,7 @@ export function AboutSection() {
           <h2 className="text-4xl md:text-6xl font-bold mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2A900] via-[#F28900] to-[#F25900]">About me</span>
           </h2>
-          <p className="text-base md:text-lg text-[#ADB7BE]">I am a technology enthusiast, a 22 year old young man who brings with him a passion for innovation and
+          <p className="text-base md:text-lg text-[#ADB7BE]">I am a technology enthusiast, a 23 year old young man who brings with him a passion for innovation and
           through the world of software and hardware development. I am determined to pursue a career
           in this dynamic field, driven by an insatiable curiosity and a desire to learn
           continuous.</p>
