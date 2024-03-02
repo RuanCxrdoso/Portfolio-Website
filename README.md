@@ -1,5 +1,8 @@
 # Portfolio 📚
-![Project cover](./public/assets/projects/myPortfolio.jpg)
+<p align="center">
+  <img src="./public/assets/projects/myPortfolio.jpg" alt="Project cover">
+</p>
+
 # Portfolio Pessoal 💭
 
 > ## Descrição 📚
