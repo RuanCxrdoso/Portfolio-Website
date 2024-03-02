@@ -18,9 +18,9 @@ const projectsData = [
   {
     id: 2,
     title: "Ignite Timer",
-    description: "Pomodoro Timer with timers register",
+    description: "Pomodoro Timer with task register",
     gitUrl: "https://github.com/RuanCxrdoso/Ignite-Timer",
-    previewUrl: "",
+    previewUrl: "https://ignite-timer-clock.vercel.app",
     image: "/assets/projects/igniteTimer.png",
     tag: ["All", "React"],
   },
