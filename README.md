@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio 📚
+![Project cover](./public/assets/projects/myPortfolio.jpg)
+# Portfolio Pessoal 💭
 
-## Getting Started
+> ## Descrição 📚
+Este projeto consiste em um portfolio pessoal que fins de divulgação e compartilhamento dos conhecimentos adquiridos e projetos realizados, e cursos finalizados. Esse app foi todo desenvolvido principalmente com React e Next.
 
-First, run the development server:
+<br>
+<br>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+> ## Tecnologias 👨🏾‍💻
+Foram utilizadas as seguintes tecnologias neste projeto:
++ React.Js :
+  -  Lib Js para desenvolvimento de interfaces modernas baseadas em componentes.
++ Next.Js:
+  - Framework React.
++ Tailwind CSS:
+  - Principal estilizador baseado em classes.
++ Framer Motion:
+  - Lib de animações de componentes.
++ Swiper:
+  - Lib de geração de carrosel.
++ Hero Icons:
+  - Lib de icons para React.
++ React Animated Numbers:
+  - Lib React para animação de números.
++ React Type Animation:
+  - Lib React para animação de textos.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br>
+<br>
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+> ## Printscreen do Projeto 📸
+ ### Preview 1
+![Project cover](./public/assets/preview1.png)
+ ### Preview 2
+![Project cover](./public/assets/preview2.png)
+ ### Preview 3
+![Project cover](./public/assets/preview3.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<br>
+<br>
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+> ## Autor 📝
++ [Ruan Cardoso](https://www.linkedin.com/in/ruancardosolinkdin/)
