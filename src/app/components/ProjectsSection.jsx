@@ -17,6 +17,15 @@ const projectsData = [
   },
   {
     id: 2,
+    title: "Ignite DT Money",
+    description: "Money manager",
+    gitUrl: "https://github.com/RuanCxrdoso/DT-Money",
+    previewUrl: "https://dt-money-manager.vercel.app/",
+    image: "/assets/projects/DTmoney.png",
+    tag: ["All", "React"],
+  },
+  {
+    id: 3,
     title: "Ignite Timer",
     description: "Pomodoro Timer with task register",
     gitUrl: "https://github.com/RuanCxrdoso/Ignite-Timer",
@@ -25,7 +34,7 @@ const projectsData = [
     tag: ["All", "React"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Ignite Feed",
     description: "Notice Feed with comments",
     gitUrl: "https://github.com/RuanCxrdoso/Ignite-Feed",
@@ -34,7 +43,7 @@ const projectsData = [
     tag: ["All", "React"],
   },
   {
-    id: 4,
+    id: 5,
     title: "NLW - Expert Notes",
     description: "Make notes with audio or text",
     gitUrl: "https://github.com/RuanCxrdoso/NLW-Notes",
@@ -43,7 +52,7 @@ const projectsData = [
     tag: ["All", "React"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Login form",
     description: "A simple login form with CSS",
     gitUrl: "https://github.com/RuanCxrdoso/Login-Form",
@@ -52,7 +61,7 @@ const projectsData = [
     tag: ["All", "Vanilla Js"],
   },
   {
-    id: 6,
+    id: 7,
     title: "Portfolio",
     description: "My personal portfolio made with Next",
     gitUrl: "https://github.com/RuanCxrdoso/portfolio-website",
@@ -61,7 +70,7 @@ const projectsData = [
     tag: ["All", "React"],
   },
   {
-    id: 7,
+    id: 8,
     title: "Spotify Interface",
     description: "Spotify Clone with Tailwind",
     gitUrl: "https://github.com/RuanCxrdoso/Spotify-Clone",
@@ -70,7 +79,7 @@ const projectsData = [
     tag: ["All", "Vanilla Js"],
   },
   {
-    id: 8,
+    id: 9,
     title: "Calculator",
     description: "Calculator with 4 operations",
     gitUrl: "https://github.com/RuanCxrdoso/Calc-Js",
@@ -79,7 +88,7 @@ const projectsData = [
     tag: ["All", "Vanilla Js"],
   },
   {
-    id: 9,
+    id: 10,
     title: "iMovi",
     description: "Bootstrap Landing Page",
     gitUrl: "https://github.com/RuanCxrdoso/Landing-Page",
