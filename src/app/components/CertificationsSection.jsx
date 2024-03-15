@@ -37,6 +37,10 @@ const images = [
     alt: "TypeScript"
   },
   {
+    src: '/assets/certifications/react.jpg',
+    alt: "React"
+  },
+  {
     src: '/assets/certifications/sass.jpg',
     alt: "Sass"
   },
