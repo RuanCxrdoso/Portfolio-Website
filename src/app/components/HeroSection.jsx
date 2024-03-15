@@ -74,7 +74,7 @@ export function HeroSection() {
           animate={ inView2 ? "onScreen" : "offScreen" } 
           transition={{ duration: 2 }}
           variants={heroAvatarVariants}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
+          className="col-span-4 place-self-center md:place-self-end mt-4 lg:mt-0"
         >
           <div className="rounded-full overflow-hidden bg-[#181818] mt-8 sm:mt-0 w-[250px] h-[250px] lg:w-[370px] lg:h-[370px] xl:w-[400px] xl:h-[400px] relative">
             <Image 
