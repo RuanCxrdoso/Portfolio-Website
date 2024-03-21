@@ -7,13 +7,13 @@ import { motion, useInView } from "framer-motion"
 
 const projectsData = [
   {
-    id: 1,
-    title: "NLW - Shorts Summary",
-    description: "Make shorts summary with IA",
-    gitUrl: "https://github.com/RuanCxrdoso/NLW-IA",
-    previewUrl: "https://nlw-summary-ia.vercel.app",
-    image: "/assets/projects/nlwIA.png",
-    tag: ["All", "Vanilla Js"],
+    id: 11,
+    title: "Ignite Shop",
+    description: "T-shirt store with Stripe checkout",
+    gitUrl: "https://github.com/RuanCxrdoso/Ignite-shop",
+    previewUrl: "https://ignite-shop-store.vercel.app/",
+    image: "/assets/projects/previewShop.png",
+    tag: ["All", "React"],
   },
   {
     id: 2,
@@ -50,6 +50,15 @@ const projectsData = [
     previewUrl: "https://nlw-smart-notes.vercel.app/",
     image: "/assets/projects/nlw-expert-notes.png",
     tag: ["All", "React"],
+  },
+  {
+    id: 1,
+    title: "NLW - Shorts Summary",
+    description: "Make shorts summary with IA",
+    gitUrl: "https://github.com/RuanCxrdoso/NLW-IA",
+    previewUrl: "https://nlw-summary-ia.vercel.app",
+    image: "/assets/projects/nlwIA.png",
+    tag: ["All", "Vanilla Js"],
   },
   {
     id: 6,
