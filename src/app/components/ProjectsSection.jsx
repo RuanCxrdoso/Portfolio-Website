@@ -7,6 +7,15 @@ import { motion, useInView } from "framer-motion"
 
 const projectsData = [
   {
+    id: 12,
+    title: "BurgerBit",
+    description: "Fast Food Landing Page",
+    gitUrl: "https://github.com/RuanCxrdoso/Burger-Landing",
+    previewUrl: "https://rcardoso-burger-landing-page.vercel.app/",
+    image: "/assets/projects/burgerCover.png",
+    tag: ["All", "React"],
+  },
+  {
     id: 11,
     title: "Ignite Shop",
     description: "T-shirt store with Stripe checkout",
@@ -126,7 +135,7 @@ const projectsData = [
 ]
 
 export function ProjectsSection() {
-  const [activeTag, setActiveTag] = useState("All")
+  const [activeTag, setActiveTag] = useState("React")
   const ref = useRef(null)
   const isInView = useInView(ref, { once: false })
 
