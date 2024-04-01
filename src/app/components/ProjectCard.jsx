@@ -7,7 +7,7 @@ export function ProjectCard({ imgUrl, title, description, gitUrl, previewUrl }) 
       <div 
         className="h-52 md:h-72 rounded-t-xl overflow-hidden relative group" 
         style={{ 
-          background: `url(${imgUrl}) center top`, 
+          background: `url(${imgUrl}) center left`, 
           backgroundSize: "cover"
         }}>
           <div className="overlay absolute top-0 left-0 w-full h-full bg-[#181818] hidden bg-opacity-0 group-hover:flex group-hover:bg-opacity-70 transition-all duration-300 justify-center items-center gap-12">
