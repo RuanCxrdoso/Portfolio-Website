@@ -107,9 +107,9 @@ $ npm run dev
 
 As seguintes bibliotecas foram utilizadas no desenvolvimento do projeto:
 
+- **[React.js](https://react.dev/)**
 - **[JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)**
 - **[Next.js](https://nextjs.org/)**
-- **[React.js](https://react.dev/)**
 - **[Swiper](https://swiperjs.com/)**
 - **[Tailwind](https://tailwindcss.com/)**
 - **[Framer Motion](https://www.framer.com/motion/)**
