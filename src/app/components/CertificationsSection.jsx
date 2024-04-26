@@ -83,7 +83,7 @@ export function CertificationsSection() {
     }, [])
 
   return (
-    <section className='mb-24 mt-16 sm:mb-36'>
+    <section className='mb-24 mt-16 sm:mb-36' id='certifications'>
       <h2 className="py-2 text-center text-4xl sm:text-6xl font-bold mt-8 mb-8">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2A900] via-[#F28900] to-[#F25900]">Certifications</span>
       </h2>

@@ -92,7 +92,6 @@ export function AboutSection() {
       <div  className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <motion.div
           ref={ref1}
-          initial="offScreen"
           animate={ isInView1 ? "inScreen" : "offScreen" }
           transition={{ duration: 1.5 }}
           variants={variantsImage}
@@ -102,7 +101,6 @@ export function AboutSection() {
         </motion.div>
         <motion.div 
           ref={ref2}
-          initial="offScrenn"
           animate={ isInView2 ? "onScreen" : "offScreen" }
           transition={{ duration: 1.5 }}
           variants={variantsContent}
