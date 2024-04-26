@@ -13,22 +13,22 @@ export function AchievementsSection() {
   const achievementsList = [
     {
       metric: "Projects",
-      value: 10,
+      value: 12,
       postfix: "+",
     },
     {
       prefix: "~",
       metric: "Lines",
-      value: 23.481,
+      value: 25.078,
     },
     {
       metric: "Certifications",
-      value: 7,
+      value: 9,
       postfix: "+",
     },
     {
       metric: "Years",
-      value: 1,
+      value: 1.5,
       postfix: "+",
     },
   ]
