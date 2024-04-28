@@ -42,13 +42,15 @@ export function Navbar() {
           <span className="text-[#F2A900]">CARDOSO </span>
           <span className="text-[#ADB7BE]">/&gt;</span>
         </Link>
+
         <div className="mobile-menu block md:hidden">
           <button onClick={() => setNavbarOpen(true)} disabled={navbarOpen} className="flex items-center px-3 py-2 rounded text-slate-200 disabled:opacity-0">
             <Bars3BottomRightIcon className="h-7 w-7"/>
           </button>
         </div>
+
         <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row items-center md:gap-12 mt-0">
+          <ul className="flex p-4 md:p-0 md:flex-row items-center md:gap-10 lg:gap-12 mt-0">
             {navLinks.map((navs, index) => {
               return (
                 <li key={index}>

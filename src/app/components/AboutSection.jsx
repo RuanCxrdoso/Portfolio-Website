@@ -12,6 +12,7 @@ import styledComponents   from '../../../public/assets/skills/styledcomponents-c
 import bootstrap   from '../../../public/assets/skills/bootstrap-color.svg'
 import git   from '../../../public/assets/skills/git-color.svg'
 import github   from '../../../public/assets/skills/github-color.svg'
+import TITANlogo   from '../../../public/assets/TITANlogo.png'
 import { useState, useTransition, useRef } from "react"
 import { TabButton } from "./TabButton"
 import { motion, useInView } from "framer-motion"
@@ -54,7 +55,18 @@ const TAB_DATA = [
     id: "experience",
     content: (
       <ul className="list-disc pl-2 ml-0 mt-4 text-lg">
-        <li className="pt-2">Front-End Developer - <Link href="https://titanci.com.br/" className="italic" target="_blank">TITAN Computação Inteligente</Link> (sep, 2023 ~ present)</li>
+        <li className="pt-2"><span>Front-End Developer - </span> 
+          {/* <span>
+            <Image src={TITANlogo} alt="" width={22} height={22} />
+          </span>  */}
+          <Link href="https://titanci.com.br/" className="italic flex" target="_blank">
+            <span className="text-[#f2a900] flex items-center">
+              TITAN
+            </span>
+            &nbsp;- Computação Inteligente
+          </Link> 
+          <span> (sep, 2023 ~ present)</span>
+        </li>
       </ul>
     )
   },
