@@ -7,7 +7,7 @@ export function MenuOverlay({ links, setNavBarOpen, navOpen }) {
   const navOpenTransition = navOpen ? 'translate-x-0' : 'translate-x-full'
 
   return(
-    <div className={`${navOpenTransition} bg-black/80 transition-all duration-500 fixed inset-0`}>
+    <div className={`${navOpenTransition} bg-black/90 transition-all duration-500 fixed inset-0`}>
 
       <button onClick={setNavBarOpen} className="absolute left-4 top-4 flex items-center px-3 py-2 rounded text-slate-20">
         <XMarkIcon className="h-10 w-10"/>

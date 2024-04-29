@@ -56,14 +56,11 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2 ml-0 mt-4 text-lg">
         <li className="pt-2"><span>Front-End Developer - </span> 
-          {/* <span>
-            <Image src={TITANlogo} alt="" width={22} height={22} />
-          </span>  */}
-          <Link href="https://titanci.com.br/" className="italic flex" target="_blank">
-            <span className="text-[#f2a900] flex items-center">
+          <Link href="https://titanci.com.br/" className="italic" target="_blank">
+            <span className="text-[#f2a900]">
               TITAN
             </span>
-            &nbsp;- Computação Inteligente
+            &nbsp; Computação Inteligente
           </Link> 
           <span> (sep, 2023 ~ present)</span>
         </li>
