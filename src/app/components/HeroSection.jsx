@@ -73,6 +73,7 @@ export function HeroSection() {
         </motion.div>
         <motion.div
           ref={ref2}
+          initial="offScreen" 
           animate={ inView2 ? "onScreen" : "offScreen" } 
           transition={{ duration: 2 }}
           variants={heroAvatarVariants}
