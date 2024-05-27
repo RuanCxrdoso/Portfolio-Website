@@ -17,57 +17,8 @@ import { useState, useTransition, useRef } from "react"
 import { TabButton } from "./TabButton"
 import { motion, useInView } from "framer-motion"
 import Link from "next/link"
+import { useTranslations } from "use-intl"
 
-const TAB_DATA = [
-  {
-    title: "Skills",
-    id: "skills",
-    content: (
-      <div className="flex flex-wrap sm:justify-center gap-6 mt-8">
-        <Image src={html5} alt="" height={60} width={60} />
-        <Image src={css3} alt="" height={60} width={60} />
-        <Image src={javascript} alt="" height={60} width={60} />
-        <Image src={typescript} alt="" height={60} width={60} />
-        <Image src={reactJs} alt="" height={60} width={60} />
-        <Image src={nextJs} alt="" height={60} width={60} />
-        <Image src={vite} alt="" height={60} width={60} />
-        <Image src={tailwind} alt="" height={60} width={60} />
-        <Image src={styledComponents} alt="" height={60} width={60} />
-        <Image src={bootstrap} alt="" height={60} width={60} />
-        <Image src={git} alt="" height={60} width={60} />
-        <Image src={github} alt="" height={60} width={60} />
-      </div>
-    )
-  },
-  {
-    title: "Education",
-    id: "education",
-    content: (
-      <ul className="list-disc pl-2 ml-0 mt-4 text-lg">
-        <li className="pt-2">Computer Engineering Bachelor - <Link href="https://www.ufba.br/" className="italic" target="_blank">Federal University of Bahia</Link> (2021 ~ 2027)</li>
-        <li className="pt-2">FullStack JavaScript Developer - <Link href="https://www.onebitcode.com/" className="italic" target="_blank">OneBitCode</Link> (Coursing)</li>
-        <li className="pt-2">React - <Link href="https://www.rocketseat.com.br/" className="italic" target="_blank">Rocketseat</Link> (Coursing)</li>
-      </ul>
-    )
-  },
-  {
-    title: "Experience",
-    id: "experience",
-    content: (
-      <ul className="list-disc pl-2 ml-0 mt-4 text-lg">
-        <li className="pt-2"><span>Front-End Developer - </span> 
-          <Link href="https://titanci.com.br/" className="italic" target="_blank">
-            <span className="text-[#f2a900]">
-              TITAN
-            </span>
-            &nbsp; Computação Inteligente
-          </Link> 
-          <span> (sep, 2023 ~ present)</span>
-        </li>
-      </ul>
-    )
-  },
-]
 
 const variantsImage = {
   inScreen: { opacity: 1, translateX: 0 },
@@ -87,6 +38,58 @@ export function AboutSection() {
   const isInView1 = useInView(ref1, { once: false })
   const isInView2 = useInView(ref2, { once: false })
 
+  const txt = useTranslations('AboutSection')
+
+  const TAB_DATA = [
+    {
+      title: "Skills",
+      id: "skills",
+      content: (
+        <div className="flex flex-wrap sm:justify-center gap-6 mt-8">
+          <Image src={html5} alt="" height={60} width={60} />
+          <Image src={css3} alt="" height={60} width={60} />
+          <Image src={javascript} alt="" height={60} width={60} />
+          <Image src={typescript} alt="" height={60} width={60} />
+          <Image src={reactJs} alt="" height={60} width={60} />
+          <Image src={nextJs} alt="" height={60} width={60} />
+          <Image src={vite} alt="" height={60} width={60} />
+          <Image src={tailwind} alt="" height={60} width={60} />
+          <Image src={styledComponents} alt="" height={60} width={60} />
+          <Image src={bootstrap} alt="" height={60} width={60} />
+          <Image src={git} alt="" height={60} width={60} />
+          <Image src={github} alt="" height={60} width={60} />
+        </div>
+      )
+    },
+    {
+      title: "Education",
+      id: "education",
+      content: (
+        <ul className="list-disc pl-2 ml-0 mt-4 text-lg">
+          <li className="pt-2">{txt('educationData.course1')} - <Link href="https://www.ufba.br/" className="italic" target="_blank">{txt('educationData.university1')}</Link> (2021 ~ 2027)</li>
+          <li className="pt-2">{txt('educationData.course2')} - <Link href="https://www.onebitcode.com/" className="italic" target="_blank">{txt('educationData.university2')}</Link></li>
+          <li className="pt-2">{txt('educationData.course3')} - <Link href="https://www.rocketseat.com.br/" className="italic" target="_blank">{txt('educationData.university3')}</Link></li>
+        </ul>
+      )
+    },
+    {
+      title: "Experience",
+      id: "experience",
+      content: (
+        <ul className="list-disc pl-2 ml-0 mt-4 text-lg">
+          <li className="pt-2"><span>{txt('experienceData.job1')} - </span> 
+            <Link href="https://titanci.com.br/" className="italic" target="_blank">
+              <span className="text-[#f2a900]">
+                {txt('experienceData.company')}
+              </span>
+            </Link> 
+            <span> ({txt('experienceData.beginMonth')}, 2023 ~ {txt('experienceData.endTime')})</span>
+          </li>
+        </ul>
+      )
+    },
+  ]
+
   function handleTabChange(id) {
     startTransition(() => {
       setTab(id)
@@ -94,7 +97,7 @@ export function AboutSection() {
   }
 
   return (
-    <section className="text-white mt-10 sm:mt-14 relative">
+    <section className="text-white mt-10 sm:mt-14 relative" id="about">
 
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#F2A900] to-transparent rounded-full h-80 w-80 z-0 blur-xl absolute top-44 -right-3/4 sm:-right-0 md:-right-44 transform translate-x-0 translate-y-1/2"></div>
 
@@ -116,16 +119,23 @@ export function AboutSection() {
           className="mt-6 md:mt-0 text-left flex flex-col h-full z-10"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2A900] via-[#F28900] to-[#F25900]">About me</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2A900] via-[#F28900] to-[#F25900]">
+              {txt('title')}
+            </span>
           </h2>
-          <p className="text-base md:text-lg text-[#ADB7BE]">I am a technology enthusiast, a 23 year old young man who brings with him a passion for innovation and
-          through the world of software and hardware development. I am determined to pursue a career
-          in this dynamic field, driven by an insatiable curiosity and a desire to learn
-          continuous.</p>
+          <p className="text-base md:text-lg text-[#ADB7BE]">
+            {txt('description')}
+          </p>
           <div className="flex flex-row mt-8">
-            <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>Skills</TabButton>
-            <TabButton selectTab={() => handleTabChange("education")} active={tab === "education"}>Education</TabButton>
-            <TabButton selectTab={() => handleTabChange("experience")} active={tab === "experience"}>Experience</TabButton>
+            <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>
+              {txt('skillsButton')}
+            </TabButton>
+            <TabButton selectTab={() => handleTabChange("education")} active={tab === "education"}>
+             {txt('educationButton')}
+            </TabButton>
+            <TabButton selectTab={() => handleTabChange("experience")} active={tab === "experience"}>
+              {txt('experienceButton')}
+            </TabButton>
           </div>
           <div className="mt-0 mb-8 z-10 text-[#ADB7BE]">
             {TAB_DATA.find((navSelected) => navSelected.id === tab).content}

@@ -1,0 +1,103 @@
+{
+  "AboutSection": {
+    "title": "Sobre mim",
+    "description": "Sou um entusiasta de tecnologia, um jovem de 23 anos que traz consigo a paixão pela inovação e pelo mundo do desenvolvimento de software e hardware. Estou determinado a seguir uma carreira nesta área dinâmica, movido por uma curiosidade insaciável e um desejo de aprender continuamente.",
+    "skillsButton": "Habilidades",
+    "educationButton": "Educação",
+    "experienceButton": "Experiência",
+    "educationData": {
+      "course1": "Engenharia da Computação",
+      "university1": "Universidade Federal da Bahia",
+      "course2": "Desenvolvedor FullStack",
+      "university2": "OneBitCode",
+      "course3": "React",
+      "university3": "Rocketseat"
+    },
+    "experienceData": {
+      "job1": "Desenvolvedor Front End",
+      "company": "TITAN Computação Inteligente",
+      "beginMonth": "set",
+      "endTime": "atualmente"
+    }
+  },
+  "AchievementsSection": {
+    "achievementsList": {
+      "projects": "Projetos",
+      "lines": "Linhas",
+      "certifications": "Certificados",
+      "years": "Anos"
+    }
+  },
+  "CertificationsSection": {
+    "title": "Certificações"
+  },
+  "EmailSection": {
+    "leftTitle": "Que tal nos conectarmos ?",
+    "description": "Atualmente estou em busca de novas oportunidades, meus canais de comunicação estarão sempre disponíveis caso queira entrar em contato. Se você tiver alguma dúvida sobre mim ou apenas quiser bater um papo profissional, será um prazer respondê-lo!",
+    "rightTitle": "Fale comigo!",
+    "linkText": "Envie-me uma mensagem ;)"
+  },
+  "Footer": {
+    "rights": "Todos os direitos reservados",
+    "devMention": "Desenvolvido por Ruan com"
+  },
+  "HeroSection": {
+    "typeAnimation": {
+      "title": "Olá, sou",
+      "role": "Desenvolvedor Front-End",
+      "course": "Estudante de Engenharia da Computação"
+    },
+    "description": "Cativado pelo mundo da tecnologia há alguns anos, meu principal objetivo é utilizar linhas de código no desenvolvimento de soluções tangíveis para problemas complexos.",
+    "hireButton": "Me contrate !",
+    "cvButton": "Meu currículo"
+  },
+  "Navbar": {
+    "aboutLink": "Sobre mim",
+    "certificationsLink": "Certificações",
+    "projectsLink": "Projetos",
+    "contactLink": "Contato",
+    "langSwitch": {
+      "pt": "Português",
+      "en": "Inglês"
+    }
+  },
+  "ProjectSection": {
+    "title": "Meus projetos",
+    "subtitle": "Clique no card para ver mais!",
+    "unite": {
+      "description": "Gerenciador de participantes em eventos."
+    },
+    "burgerBit": {
+      "description": "Landing Page de um Fast Food de Hambúrgueres."
+    },
+    "igniteShop": {
+      "description": "Loja de camisetas com checkout de compras usando o Stripe."
+    },
+    "dtMoney": {
+      "description": "Gerenciador de despesas."
+    },
+    "igniteTimer": {
+      "description": "Timer Pomodoro com registrador de tarefas."
+    },
+    "igniteFeed": {
+      "description": "Feed de uma rede social com adição de comentários." 
+    },
+    "expert": {
+      "description": "Gerador de notas feitas via texto ou áudio."
+    },
+    "ia": {
+      "description": "Gerador de resumos de shorts do Youtube usando IA."
+    },
+    "loginForm": {
+      "description": "Página simples de login utilizando CSS."
+    },
+    "portfolio": {
+      "title": "Portfólio",
+      "description": "Meu portfólio pessoal feito com Next.js."
+    },
+    "spotify": {
+      "description": "Clone da interface web do Spotify."
+    },
+    "allTag": "Todos" 
+  }
+}

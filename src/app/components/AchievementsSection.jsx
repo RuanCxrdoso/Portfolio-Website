@@ -1,5 +1,6 @@
 "use client"
 
+import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 
 const AnimatedNumber = dynamic(
@@ -10,24 +11,26 @@ const AnimatedNumber = dynamic(
 );
 
 export function AchievementsSection() {
+  const txt = useTranslations('AchievementsSection')
+
   const achievementsList = [
     {
-      metric: "Projects",
+      metric: txt('achievementsList.projects'),
       value: 12,
       postfix: "+",
     },
     {
       prefix: "~",
-      metric: "Lines",
+      metric: txt('achievementsList.lines'),
       value: 25.078,
     },
     {
-      metric: "Certifications",
+      metric: txt('achievementsList.certifications'),
       value: 9,
       postfix: "+",
     },
     {
-      metric: "Years",
+      metric: txt('achievementsList.years'),
       value: 1.5,
       postfix: "+",
     },

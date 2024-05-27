@@ -10,6 +10,7 @@ import { EffectCoverflow, Navigation, Pagination, Autoplay } from 'swiper/module
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import { useTranslations } from 'next-intl'
 
 const images = [
   {
@@ -68,6 +69,8 @@ export function CertificationsSection() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: false })
 
+  const txt = useTranslations('CertificationsSection')
+
   useEffect(() => {
     const updateNavigation = () => {
       setNavigation(window.innerWidth > 768)
@@ -85,7 +88,7 @@ export function CertificationsSection() {
   return (
     <section className='mb-24 mt-16 sm:mb-36' id='certifications'>
       <h2 className="py-2 text-center text-4xl sm:text-6xl font-bold mt-8 mb-8">
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2A900] via-[#F28900] to-[#F25900]">Certifications</span>
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2A900] via-[#F28900] to-[#F25900]">{txt('title')}</span>
       </h2>
       <motion.div
         ref={ref}

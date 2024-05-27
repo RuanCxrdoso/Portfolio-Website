@@ -1,0 +1,103 @@
+{
+  "AboutSection": {
+    "title": "About me",
+    "description": "I am a technology enthusiast, a 23 year old young man who brings with him a passion for innovation and through the world of software and hardware development. I am determined to pursue a career in this dynamic field, driven by an insatiable curiosity and a desire to learn continuous.",
+    "skillsButton": "Skills",
+    "educationButton": "Education",
+    "experienceButton": "Experience",
+    "educationData": {
+      "course1": "Computer Engineering Bachelor",
+      "university1": "Federal University of Bahia",
+      "course2": "FullStack JavaScript Developer - ",
+      "university2": "OneBitCode",
+      "course3": "React",
+      "university3": "Rocketseat"
+    },
+    "experienceData": {
+      "job1": "Front End Developer",
+      "company": "TITAN Computação Inteligente",
+      "beginMonth": "sep",
+      "endTime": "present"
+    }
+  },
+  "AchievementsSection": {
+    "achievementsList": {
+      "projects": "Projects",
+      "lines": "Lines",
+      "certifications": "Certifications",
+      "years": "Years"
+    }
+  },
+  "CertificationsSection": {
+    "title": "Certifications"
+  },
+  "EmailSection": {
+    "leftTitle": "Let's Connect",
+    "description": "I am currently looking for new opportunities, my communication channels will always be available if you want to get in touch. If you have any questions about me or just want to chat professionally, I'm happy to answer them!",
+    "rightTitle": "Talk with me!",
+    "linkText": "Send me a message ;)"
+  },
+  "Footer": {
+    "rights": "All rights reserved",
+    "devMention": "Developed by Ruan with"
+  },
+  "HeroSection": {
+    "typeAnimation": {
+      "title": "Hello, I'm",
+      "role": "Front-End Developer",
+      "course": "Computer Engineering Student"
+    },
+    "description": "Captivated by the world of technology for a few years, my main objective is to use lines of code to develop tangible solutions to complex problems.",
+    "hireButton": "Hire me !",
+    "cvButton": "Download my CV"
+  },
+  "Navbar": {
+    "aboutLink": "About me",
+    "certificationsLink": "Certifications",
+    "projectsLink": "Projects",
+    "contactLink": "Contact",
+    "langSwitch": {
+      "pt": "Portuguese",
+      "en": "English"
+    }
+  },
+  "ProjectSection": {
+    "title": "My projects",
+    "subtitle": "Click on the card to see more!",
+    "unite": {
+      "description": "Event participant manager."
+    },
+    "burgerBit": {
+      "description": "BurgerBit Fast Food Landing Page."
+    },
+    "igniteShop": {
+      "description": "T-shirt store with Stripe checkout."
+    },
+    "dtMoney": {
+      "description": "Expenses manager."
+    },
+    "igniteTimer": {
+      "description": "Pomodoro Timer with task register."
+    },
+    "igniteFeed": {
+      "description": "Feed from a social network with comments." 
+    },
+    "expert": {
+      "description": "Make notes with audio or text."
+    },
+    "ia": {
+      "description": "Make shorts summary with AI."
+    },
+    "loginForm": {
+      "description": "A simple login form with CSS."
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "My personal portfolio made with Next.js."
+    },
+    "spotify": {
+      "description": "Clone of desktop Spotify interface."
+    },
+    "allTag": "All" 
+  }
+}
