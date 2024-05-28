@@ -45,15 +45,15 @@ export function HeroSection() {
             <br />
             <TypeAnimation
               sequence={[
-                // 'Ruan',
-                // 2000,
+                'Ruan',
+                1500,
                 txt('typeAnimation.role'),
-                1000,
+                2000,
                 txt('typeAnimation.course'),
-                1000,
+                2000,
               ]}
               wrapper="span"
-              speed={40}
+              speed={55}
               repeat={Infinity}
             />
           </h1>
@@ -71,10 +71,10 @@ export function HeroSection() {
             </div>
             <div>
               <a download={true} href={myCV} className="py-1 w-full sm:w-fit mt-3">
-                <span className="flex items-center gap-2 transition-colors duration-300 text-[#ADB7BE] bg-[#121212] hover:bg-[#424242] rounded-full px-5 py-3">
-                  {txt('cvButton')}
-                  <ArrowDownTrayIcon className="h-5 w-5" />
-                </span>
+                <div className="flex justify-center items-center gap-2 transition-colors duration-300 text-[#ADB7BE] bg-[#121212] hover:bg-[#424242] rounded-full px-5 py-3">
+                    {txt('cvButton')}
+                    <ArrowDownTrayIcon className="h-5 w-5" />
+                </div>
               </a>
             </div>
           </div>

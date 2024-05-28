@@ -17,8 +17,7 @@ export default function ToggleSwitch() {
   const router = useRouter()
 
   useEffect(() => {
-    // Atualiza o localStorage sempre que isToggled mudar
-    localStorage.setItem('isToggled', JSON.stringify(isToggled));
+    localStorage.setItem('isToggled', JSON.stringify(isToggled))
   }, [isToggled])
 
   const toggleSwitch = () => {
