@@ -20,7 +20,7 @@ export function ProjectsSection() {
       title: "NLW - Unite",
       description: txt('unite.description'),
       gitUrl: "https://github.com/RuanCxrdoso/NLW-Unite",
-      previewUrl: "https://github.com/RuanCxrdoso/NLW-Unite",
+      previewUrl: "https://rcardoso-nlw-unite.vercel.app",
       image: "/assets/projects/nlwPassCover.png",
       tag: ["All", "React"],
     },
