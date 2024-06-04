@@ -63,7 +63,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-4">
             <div>
               <a
-                href="https://www.linkedin.com/in/ruancardosolinkdin/" target="_blank" 
+                href="https://www.linkedin.com/in/cardosoruan/" target="_blank" 
                 className="block py-3 px-5 font-bold rounded-full bg-gradient-to-br from-[#F2A900] via-[#F28900] to-[#F25900] text-black hover:text-[#181818] transition-colors duration-300 animate-bounce"
               >
                 {txt('hireButton')}

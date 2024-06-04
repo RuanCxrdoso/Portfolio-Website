@@ -50,7 +50,7 @@ export function EmailSection() {
           <Link href="https://github.com/RuanCxrdoso" target="_blank">
             <Image src={GithubIcon} width={50} height={50} alt="Github Icon"/>
           </Link>
-          <Link href="https://www.linkedin.com/in/ruancardosolinkdin/" target="_blank">
+          <Link href="https://www.linkedin.com/in/cardosoruan/" target="_blank">
             <Image src={LinkedinIcon} width={50} height={50} alt="Linkedin Icon" />
           </Link>
         </div>
