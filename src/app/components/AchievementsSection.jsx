@@ -22,7 +22,7 @@ export function AchievementsSection() {
     {
       prefix: "~",
       metric: txt('achievementsList.lines'),
-      value: 25.078,
+      value: 25.631,
     },
     {
       metric: txt('achievementsList.certifications'),
@@ -31,7 +31,7 @@ export function AchievementsSection() {
     },
     {
       metric: txt('achievementsList.years'),
-      value: 1.5,
+      value: 2,
       postfix: "+",
     },
   ]

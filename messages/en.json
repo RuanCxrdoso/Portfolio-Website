@@ -14,10 +14,18 @@
       "university3": "Rocketseat"
     },
     "experienceData": {
-      "job1": "Front End Developer",
-      "company": "TITAN Computação Inteligente",
-      "beginMonth": "sep",
-      "endTime": "present"
+      "job1": {
+        "name": "Front-End Developer",
+        "company": "TITAN Computação Inteligente",
+        "beginMonth": "sep",
+        "endTime": "present"
+      },
+      "job2": {
+        "name": "Front-End Developer",
+        "company": "iTech Tecnologia",
+        "beginMonth": "jun",
+        "endTime": "present"
+      }
     }
   },
   "AchievementsSection": {
