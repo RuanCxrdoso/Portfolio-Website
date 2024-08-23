@@ -12,7 +12,7 @@ import styledComponents   from '../../../public/assets/skills/styledcomponents-c
 import bootstrap   from '../../../public/assets/skills/bootstrap-color.svg'
 import git   from '../../../public/assets/skills/git-color.svg'
 import github   from '../../../public/assets/skills/github-color.svg'
-import TITANlogo   from '../../../public/assets/TITANlogo.png'
+import materialUI   from '../../../public/assets/skills/material-ui.svg'
 import { useState, useTransition, useRef } from "react"
 import { TabButton } from "./TabButton"
 import { motion, useInView } from "framer-motion"
@@ -55,6 +55,7 @@ export function AboutSection() {
           <Image src={vite} alt="" height={60} width={60} />
           <Image src={tailwind} alt="" height={60} width={60} />
           <Image src={styledComponents} alt="" height={60} width={60} />
+          <Image src={materialUI} alt="" height={60} width={60} />
           <Image src={bootstrap} alt="" height={60} width={60} />
           <Image src={git} alt="" height={60} width={60} />
           <Image src={github} alt="" height={60} width={60} />
@@ -77,13 +78,21 @@ export function AboutSection() {
       id: "experience",
       content: (
         <ul className="list-disc pl-2 ml-0 mt-4 text-lg">
-          <li className="pt-2"><span>{txt('experienceData.job1')} - </span> 
-            <Link href="https://titanci.com.br/" className="italic" target="_blank">
+          <li className="pt-2"><span>{txt('experienceData.job2.name')} - </span> 
+            <Link href="https://www.linkedin.com/company/itech-tecnologia/" className="italic" target="_blank">
               <span className="text-[#f2a900]">
-                {txt('experienceData.company')}
+                {txt('experienceData.job2.company')}
               </span>
             </Link> 
-            <span> ({txt('experienceData.beginMonth')}, 2023 ~ {txt('experienceData.endTime')})</span>
+            <span> ({txt('experienceData.job2.beginMonth')}, 2024 ~ {txt('experienceData.job2.endTime')})</span>
+          </li>
+          <li className="pt-2"><span>{txt('experienceData.job1.name')} - </span> 
+            <Link href="https://titanci.com.br/" className="italic" target="_blank">
+              <span className="text-[#f2a900]">
+                {txt('experienceData.job1.company')}
+              </span>
+            </Link> 
+            <span> ({txt('experienceData.job1.beginMonth')}, 2023 ~ {txt('experienceData.job1.endTime')})</span>
           </li>
         </ul>
       )
