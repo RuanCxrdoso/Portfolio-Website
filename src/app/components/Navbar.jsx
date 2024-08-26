@@ -39,7 +39,7 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-[#080808] z-20">
-      <div className="flex flex-wrap justify-between items-center mx-auto py-4 px-4 md:py-8 md:px-6 lg:px-10 2xl:px-20">
+      <div className="flex flex-wrap justify-between items-center mx-auto py-2 px-4 md:py-6 md:px-6 lg:px-10 2xl:px-16">
         <Link href={"#home"} className="text-lg md:text-2xl 2xl:text-3xl text-white">
           <span className="text-[#ADB7BE]">&lt;</span>
           <span className="text-[#ADB7BE]">R </span>
@@ -55,7 +55,7 @@ export function Navbar() {
             </button>
           </div>
           <div className="menu hidden md:block md:w-auto" id="navbar">
-            <ul className="flex p-4 md:p-0 md:flex-row items-center md:gap-6 lg:gap-8 2xl:gap-20 mt-0">
+            <ul className="flex p-4 md:p-0 md:flex-row items-center md:gap-6 lg:gap-8 2xl:gap-16 mt-0">
               {navLinks.map((navs, index) => {
                 return (
                   <li key={index}>
