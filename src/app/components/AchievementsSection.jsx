@@ -16,13 +16,13 @@ export function AchievementsSection() {
   const achievementsList = [
     {
       metric: txt('achievementsList.projects'),
-      value: 12,
+      value: 13,
       postfix: "+",
     },
     {
       prefix: "~",
       metric: txt('achievementsList.lines'),
-      value: 25.631,
+      value: 28.201,
     },
     {
       metric: txt('achievementsList.certifications'),
