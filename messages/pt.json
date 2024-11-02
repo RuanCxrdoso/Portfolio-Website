@@ -52,7 +52,7 @@
   "HeroSection": {
     "typeAnimation": {
       "title": "Olá, eu sou",
-      "role": "Desenvolvedor Front-End",
+      "role": "Desenvolvedor de Software",
       "course": "Estudante de Engenharia da Computação"
     },
     "description": "Cativado pelo mundo da tecnologia há alguns anos, meu principal objetivo é utilizar linhas de código no desenvolvimento de soluções tangíveis para problemas complexos.",
@@ -72,6 +72,12 @@
   "ProjectSection": {
     "title": "Meus projetos",
     "subtitle": "Clique no card para ver mais!",
+    "pocket": {
+      "description": "Registrador de frequência de tarefas semanais."
+    },
+    "pocketAPI": {
+      "description": "API in.orbit desenvolvido com fastify."
+    },
     "unite": {
       "description": "Gerenciador de participantes em eventos."
     },

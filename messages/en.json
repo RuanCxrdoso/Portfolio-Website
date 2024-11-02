@@ -52,7 +52,7 @@
   "HeroSection": {
     "typeAnimation": {
       "title": "Hello, I'm",
-      "role": "Front-End Developer",
+      "role": "Software Developer",
       "course": "Computer Engineering Student"
     },
     "description": "Captivated by the world of technology for a few years, my main objective is to use lines of code to develop tangible solutions to complex problems.",
@@ -72,6 +72,12 @@
   "ProjectSection": {
     "title": "My projects",
     "subtitle": "Click on the card to see more!",
+    "pocket": {
+      "description": "Weekly task frequency recorder."
+    },
+    "pocketAPI": {
+      "description": "in.orbit API developed with fastify."
+    },
     "unite": {
       "description": "Event participant manager."
     },
